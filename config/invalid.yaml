@@ -1,0 +1,123 @@
+q_states:
+  q_list:
+    - '0'  # Estado inicial
+    - '1'  # Marcar símbolos antes de #
+    - '2'  # Validar símbolo #
+    - '3'  # Marcar símbolos después de #
+    - '4'  # Verificar balance
+    - '5'  # Aceptado
+    - '6'  # Rechazado
+  initial: '0'
+  final: '5'
+alphabet:
+  - a
+  - b
+  - #
+tape_alphabet:
+  - a
+  - b
+  - #
+  - X  # Marcador temporal
+delta:
+  # Marcar símbolos antes del #
+  - params:
+      initial_state: '0'
+      tape_input: a
+    output:
+      final_state: '1'
+      tape_output: X
+      tape_displacement: R
+  - params:
+      initial_state: '0'
+      tape_input: b
+    output:
+      final_state: '1'
+      tape_output: X
+      tape_displacement: R
+
+  # Continuar marcando antes del #
+  - params:
+      initial_state: '1'
+      tape_input: a
+    output:
+      final_state: '1'
+      tape_output: a
+      tape_displacement: R
+  - params:
+      initial_state: '1'
+      tape_input: b
+    output:
+      final_state: '1'
+      tape_output: b
+      tape_displacement: R
+  - params:
+      initial_state: '1'
+      tape_input: #
+    output:
+      final_state: '2'
+      tape_output: #
+      tape_displacement: R
+
+  # Validar y marcar después del #
+  - params:
+      initial_state: '2'
+      tape_input: a
+    output:
+      final_state: '3'
+      tape_output: X
+      tape_displacement: R
+  - params:
+      initial_state: '2'
+      tape_input: b
+    output:
+      final_state: '3'
+      tape_output: X
+      tape_displacement: R
+
+  # Continuar marcando después del #
+  - params:
+      initial_state: '3'
+      tape_input: a
+    output:
+      final_state: '3'
+      tape_output: a
+      tape_displacement: R
+  - params:
+      initial_state: '3'
+      tape_input: b
+    output:
+      final_state: '3'
+      tape_output: b
+      tape_displacement: R
+  - params:
+      initial_state: '3'
+      tape_input: #
+    output:
+      final_state: '4'
+      tape_output: #
+      tape_displacement: L
+
+  # Verificar balance al regresar
+  - params:
+      initial_state: '4'
+      tape_input: X
+    output:
+      final_state: '5'
+      tape_output: X
+      tape_displacement: N
+
+  # Rechazo si no hay transición válida
+  - params:
+      initial_state: '0'
+      tape_input: #
+    output:
+      final_state: '6'
+      tape_output: #
+      tape_displacement: N
+
+simulation_strings:
+  - aa#bb  # Aceptada
+  - aaa#bbb  # Rechazada
+  - ab#ba  # Aceptada
+  - abc#abc  # Rechazada
+  - abb#ab  # Rechazada

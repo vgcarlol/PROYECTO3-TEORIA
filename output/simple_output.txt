@@ -1,0 +1,25 @@
+Simulating input: aab#aab
+State: 0, Tape: aab#aab#, Head: 0
+State: 1, Tape: aab#aab#, Head: 1
+State: 2, Tape: aab#aab#, Head: 2
+State: 3, Tape: aab#aab#, Head: 3
+State: 5, Tape: aab#aab#, Head: 4
+Result: Accepted
+Simulating input: ab#ab
+State: 0, Tape: ab#ab#, Head: 0
+State: 1, Tape: ab#ab#, Head: 1
+State: 2, Tape: ab#ab#, Head: 2
+State: 5, Tape: ab#ab#, Head: 3
+Result: Accepted
+Simulating input: abbababa#aba
+State: 0, Tape: abbababa#aba#, Head: 0
+State: 1, Tape: abbababa#aba#, Head: 1
+State: 2, Tape: abbababa#aba#, Head: 2
+State: 3, Tape: abbababa#aba#, Head: 3
+State: 3, Tape: abbababa#aba#, Head: 4
+State: 3, Tape: abbababa#aba#, Head: 5
+State: 3, Tape: abbababa#aba#, Head: 6
+State: 3, Tape: abbababa#aba#, Head: 7
+State: 3, Tape: abbababa#aba#, Head: 8
+State: 5, Tape: abbababa#aba#, Head: 9
+Result: Accepted

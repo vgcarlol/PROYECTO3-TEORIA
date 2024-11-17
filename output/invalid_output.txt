@@ -1,0 +1,32 @@
+Simulating input: aa#bb
+State: 0, Tape: aa#bb#, Head: 0
+State: 1, Tape: Xa#bb#, Head: 1
+State: 1, Tape: Xa#bb#, Head: 2
+State: 1, Tape: Xa#bb#, Head: 2
+Result: Rejected
+Simulating input: aaa#bbb
+State: 0, Tape: aaa#bbb#, Head: 0
+State: 1, Tape: Xaa#bbb#, Head: 1
+State: 1, Tape: Xaa#bbb#, Head: 2
+State: 1, Tape: Xaa#bbb#, Head: 3
+State: 1, Tape: Xaa#bbb#, Head: 3
+Result: Rejected
+Simulating input: ab#ba
+State: 0, Tape: ab#ba#, Head: 0
+State: 1, Tape: Xb#ba#, Head: 1
+State: 1, Tape: Xb#ba#, Head: 2
+State: 1, Tape: Xb#ba#, Head: 2
+Result: Rejected
+Simulating input: abc#abc
+State: 0, Tape: abc#abc#, Head: 0
+State: 1, Tape: Xbc#abc#, Head: 1
+State: 1, Tape: Xbc#abc#, Head: 2
+State: 1, Tape: Xbc#abc#, Head: 2
+Result: Rejected
+Simulating input: abb#ab
+State: 0, Tape: abb#ab#, Head: 0
+State: 1, Tape: Xbb#ab#, Head: 1
+State: 1, Tape: Xbb#ab#, Head: 2
+State: 1, Tape: Xbb#ab#, Head: 3
+State: 1, Tape: Xbb#ab#, Head: 3
+Result: Rejected
