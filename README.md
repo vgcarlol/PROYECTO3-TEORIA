@@ -4,7 +4,7 @@
 Este proyecto consiste en un simulador de Máquina de Turing desarrollado en Python. Permite cargar configuraciones desde archivos YAML, simular su comportamiento y generar diagramas de estado utilizando Graphviz.
 
 ## Video de explicación y demostración
-- He grabado un pequeño video demostrando y explicando brevemente el programa, puedes verlo en YouTube: [Haciendo clic en este video](https://)
+- He grabado un pequeño video demostrando y explicando brevemente el programa, puedes verlo en YouTube: [Haciendo clic en este video](https://youtu.be/-OQgKzMighY)
 
 ## Instrucciones de Uso
 
